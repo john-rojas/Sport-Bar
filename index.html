@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Esteban Moreno">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base proyecto esteban</title>
+    <link rel="icon" href="/assets/images/LOGO PANDA SPORT BAR.png PANDA SPORT BAR.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css"> <!-- ? Añadir todas las hojas de Estilos que se requieran -->
+    <!-- Icono -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <button type="button" onclick="picar()">PA` PICAR</button>
+            <button type="button" onclick="clasicos()">COCTELES CLASICOS</button>
+            <button type="button" onclick="sport()">COCTELES SPORT</button>
+            <button type="button" onclick="noalcohol()">SIN ALCOHOL</button>
+            <button type="button" onclick="cervezas()">CERVEZAS</button>
+        </nav>
+        <div class="menu">
+            <img src="/assets/svg/hamburguer.svg" class="hamburguesa" onclick="cambiarhamburg()">
+        </div>
+    </header>
+    <main>
+        <hr>
+        <div>
+            <embed src="../assets/pdfs/Menu.pdf" type="application/pdf" id="embed"/>
+        </div>
+    </main>
+    <div class="varios">
+        <img src="/assets/images/LOGO PANDA SPORT BAR.png PANDA SPORT BAR.png" alt="Logo" id="logo">
+        <div id="whatsapp">
+            <!-- Icono -->
+            <a href="https://api.whatsapp.com/send?phone=573228045158&text=Hola,%20quiero%20hacer%20un%20pedido%20de%20la%20carta%20de%20Panda%20Sport%20Bar" class="float pulse" target="_blank">
+                <img src="/assets/svg/whatsapp.svg" alt="whatsapp">
+            </a>
+        </div>
+    </div>
+</body>
+
+<script src="js/script.js"></script> <!-- ? Añadir todos los js que se requieran -->
+
+</html>

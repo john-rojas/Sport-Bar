@@ -1,0 +1,292 @@
+body {
+    background: linear-gradient(150deg, #000000, #410707, #000000);
+    color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    width: calc(100vw - 4em);
+    margin: 1em 0;
+    justify-content: start;
+    width: 100vw;
+
+    & button.hamburguesa {
+        border-radius: 50%;
+        height: 4.5vh;
+        width: 4.5vh;
+        font-weight: 600;
+        font-size: 2em;
+        position: relative;
+        left: 2em;
+        cursor: pointer;
+        display: none;
+    }
+}
+
+header>nav {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    max-height: 5vh;
+    overflow: hidden;
+    padding: 1em 0;
+    transition: ease 1s;
+
+    & button {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.7em;
+        font-weight: 700;
+        margin: 0 1vw;
+        cursor: pointer;
+        border-radius: 30px;
+
+        &:hover {
+            transition: 0.5s;
+            transform: scale(1.2);
+        }
+
+        &:not(:hover) {
+            transition: 0.5s;
+            transform: scale(1);
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & hr {
+        border: 2px solid rgb(142, 30, 30);
+        width: 80vw;
+        margin: 0;
+        margin-bottom: 2vh;
+    }
+
+    & div {
+        align-self: end;
+        overflow: hidden;
+        position: relative;
+        right: 5vw;
+        height: 85vh;
+        width: 50vw;
+        border-radius: 20px;
+
+        & embed {
+            height: calc(100% + 5vh);
+            width: 100%;
+            position: relative;
+            bottom: 5vh;
+        }
+    }
+}
+
+div.varios {
+    & img#logo {
+        position: absolute;
+        left: -5vw;
+        top: 0;
+        width: 100vh;
+        opacity: 0.5;
+        z-index: -1;
+    }
+    & img.whatsapp{
+        position: absolute;
+        left: -50vw;
+        top: 0;
+        width: 50vh;
+        opacity: 0.5;
+        z-index: -1;  
+    }
+
+    & div#whatsapp {
+        position: absolute;
+        left: 3em;
+        bottom: 3em;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        cursor: progress;
+
+        & img {
+            width: 10vh;
+            height: 10vh;
+        }
+    }
+}
+
+/* BOTÓN WHATSAPP*/
+/* Estilos boton whatsapp */
+.float {
+
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 50px;
+    box-shadow: 2px 2px 3px #999;
+}
+
+.float:hover {
+    text-decoration: none;
+    color: linear-gradient(150deg, #000000, #410707, #000000);
+    background-color: #000000;
+    box-shadow: none;
+    animation: shake 1s;
+    animation-iteration-count: infinite;
+}
+
+.my-float {
+    margin: 10px 8px 0 13px;
+    margin-top: 9px;
+}
+
+/* todo animaciones boton whatsapp */
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0px #25D366;
+        rgba: (0, 0, 0, 0.2);
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(5px);
+    }
+
+    50% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* FIN DEL BOTÓN*/
+
+
+.menu {
+    position: fixed;
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        font-size: 0.8em;
+    }
+
+    header {
+        position: absolute;
+        width: 50vw;
+        margin-top: 0;
+        height: 100vh;
+        z-index: 4;
+        top: 0;
+        left: 0;
+    }
+    header>nav {
+        display: flex;
+        flex-direction: column;
+        max-height: 100vh;
+        background-color: #781523;
+        border-right: 3px yellow;
+        & button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.7em;
+            font-weight: 700;
+            margin: 0 1vw;
+            cursor: pointer;
+            border-radius: 30px;
+            &:hover {
+                transition: 0.5s;
+                transform: scale(1.2);
+            }
+            &:not(:hover) {
+                transition: 0.5s;
+                transform: scale(1);
+            }
+        }
+    }
+
+    main {
+        align-items: center;
+
+        & hr {
+            display: none;
+        }
+
+        & div {
+            align-self: center;
+            justify-self: center;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            height: 90vh;
+            width: 90vw;
+            border-radius: 20px;
+
+            & embed {
+                height: calc(100% + 5vh);
+                width: 100%;
+                position: relative;
+                bottom: 5vh;
+            }
+        }
+    }
+
+    .menu {
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center;
+        display:block;
+        margin: 20px 0 10px 20px;
+    }
+    .hamburguesa {
+        /* arriba, derecha, abajo, izquier */
+        width: 30px;
+        height: 30px;
+    }
+
+    div.varios {
+        & img#logo {
+            position: absolute;
+            left: -5vw;
+            top: 0;
+            width: 100vh;
+            max-width: 100vw;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        & div#whatsapp {
+            left: 70vw;
+            bottom: 3em;
+
+            border-radius: 50%;
+        }
+    }
+}
